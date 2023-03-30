@@ -1,0 +1,26 @@
+body {
+    background-color: pink;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.grey-bg {
+    background-color: #e5e5e5;
+}
+
+.fa.fa-search {
+    top:15px;
+    left: 15px;
+}
+
+.form-input{
+    height: 40px;
+    text-indent: 33px;
+}
+
+.form-input:focus{
+    box-shadow: none;
+    border:none;
+}
