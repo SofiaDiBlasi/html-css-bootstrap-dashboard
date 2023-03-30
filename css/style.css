@@ -10,17 +10,34 @@ body {
     background-color: #e5e5e5;
 }
 
+.blue-bg {
+    background-color: #051e34;
+}
+
 .fa.fa-search {
     top:15px;
     left: 15px;
 }
 
 .form-input{
-    height: 40px;
-    text-indent: 33px;
+    height: 2.5rem;
+    text-indent: 2rem;
 }
 
 .form-input:focus{
     box-shadow: none;
     border:none;
+}
+
+.side_bar {
+    width: 3.5rem;
+    background-image: url(../img/sidebar-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-widht: 1200px) {
+    .side_bar {
+        width: 7.5rem;
+    } 
 }
