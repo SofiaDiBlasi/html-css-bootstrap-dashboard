@@ -36,7 +36,7 @@ body {
     background-size: cover;
 }
 
-@media screen and (min-widht: 1200px) {
+@media (min-width: 1200px) {
     .side_bar {
         width: 7.5rem;
     } 

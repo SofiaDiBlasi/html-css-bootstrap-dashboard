@@ -17,14 +17,14 @@
         <!--NAV-BAR-->
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid d-block white-bg">
-                <div class="row d-flex justify-content-center align-items-center">
+                <div class="row d-flex justify-content-around align-items-center">
                     <div class="col-1 d-flex justify-content-center">
                         <a class="navbar-brand" href="#">
                             <img class="d-xl-none" src="./img/mobile-logo.png" alt="Bootstrap" width="50" height="50">
                             <img class="d-xl-block d-none" src="./img/logo.svg" alt="">
                         </a>
                     </div>
-                    <div class="col-9">
+                    <div class="col-9 col-xl-10">
                         <div class="position-relative d-flex">
                             <i class="fa fa-search position-absolute"></i>
                             <input type="text" class="form-control form-input rounded grey-bg" placeholder="Prova a cercare: Lezioni di Laravel">
@@ -43,10 +43,10 @@
     <!--SIDE-BAR-->
     <section class="side_bar container blue-bg m-0 flex-shrink-0 vh-100 text-white">
         <div class="d-flex flex-column">
-            <ul class="nav flex-column align-items-center py-4">
-                <li class="nav-item my-1"><i class="fa-solid fa-house"></i></li>
-                <li class="nav-item my-1"><i class="fa-solid fa-signal"></i></li>
-                <li class="nav-item my-1"><i class="fa-solid fa-signal"></i></li>
+            <ul class="nav flex-column align-items-start py-4">
+                <li class="nav-item my-1 d-flex"><i class="fa-solid fa-house m-2"></i><span class="d-xl-block d-none m-2">Home</span></li>
+                <li class="nav-item my-1 d-flex"><i class="fa-solid fa-signal m-2"></i><span class="d-xl-block d-none m-2">Stats</span></li>
+                <li class="nav-item my-1 d-flex"><i class="fa-solid fa-signal m-2"></i><span class="d-xl-block d-none m-2">Signals</span></li>
             </ul>
         </div>
     </section>
