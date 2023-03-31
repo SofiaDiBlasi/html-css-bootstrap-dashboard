@@ -1,6 +1,9 @@
 body {
     background-color: pink;
+    font-family: 'Roboto', sans-serif;
 }
+
+/*COLOR*/
 
 .white-bg {
     background-color: white;
@@ -10,9 +13,22 @@ body {
     background-color: #e5e5e5;
 }
 
+.light-blue-bg {
+    background-color: #1b72e8;
+}
+
+
 .blue-bg {
     background-color: #051e34;
 }
+
+/*HEADER*/
+
+header {
+    height: 5rem;
+}
+
+/*NAV BAR*/
 
 .fa.fa-search {
     top:15px;
@@ -29,6 +45,18 @@ body {
     border:none;
 }
 
+/*MAIN CONTAINER*/
+
+.main_container {
+    padding-top: 75px;
+}
+
+.card_container {
+    padding-left: 3.5rem;
+}
+
+/*SIDE BAR*/
+
 .side_bar {
     width: 3.5rem;
     background-image: url(../img/sidebar-bg.png);
@@ -36,8 +64,29 @@ body {
     background-size: cover;
 }
 
+/*CONTAINER PROSSIME CLASSI*/
+
+.icon_container {
+    width: 30px;
+    height: 30px;
+}
+
+/*TIPOGRAPHY*/
+
+.button_plus {
+    font-size: 50px;
+}
+
+/*MEDIA QUERY*/
+
 @media (min-width: 1200px) {
     .side_bar {
-        width: 7.5rem;
+        width: 9rem;
     } 
+    .main_container {
+        padding-top: 55px;
+    }
+    .card_container {
+        padding-left: 9rem;
+    }
 }
