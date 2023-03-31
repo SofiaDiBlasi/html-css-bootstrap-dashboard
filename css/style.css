@@ -1,5 +1,5 @@
 body {
-    background-color: pink;
+    background-color: #f8f9fa;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -17,6 +17,9 @@ body {
     background-color: #1b72e8;
 }
 
+.medium-blue-bg {
+    background-color: #165bba;
+}
 
 .blue-bg {
     background-color: #051e34;
