@@ -67,6 +67,10 @@ header {
     background-size: cover;
 }
 
+.side_bar li:hover {
+    background-color: grey;
+}
+
 /*CONTAINER PROSSIME CLASSI*/
 
 .icon_container {
@@ -92,4 +96,9 @@ header {
     .card_container {
         padding-left: 9rem;
     }
+    
+    #offcanvasRight {
+        width: 50%!important;
+    }
+
 }

@@ -37,7 +37,14 @@
                         <i class="fa-solid fa-list-ul d-xl-block d-none"></i>
                         <i class="fa-solid fa-circle-question d-xl-block d-none" style="color: #000000;"></i>
                         <i class="fa-solid fa-ellipsis-vertical d-xl-block d-none" style="color: #000000;"></i>
-                        <i class="fa-solid fa-bell" style="color: #ea9e34;"></i>
+                        <div class="dropdown">
+                            <i data-bs-toggle="dropdown" class="fa-solid fa-bell" style="color: #ea9e34;"></i>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +85,98 @@
                 <div class="row d-flex flex-column flex-md-row flex-lg-row text-white">
                     <div class="d-flex col-12 col-md-4 col-lg-3 order-md-3">
                         <p class="me-3 my-4">Nuovo Studente</p>
-                        <i class="fa-regular fa-square-plus button_plus my-3" style="color: #ffffff;"></i>
+                        <a data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">
+                            <i class="fa-regular fa-square-plus button_plus my-3" style="color: #ffffff;"></i>
+                        </a>
+                        <div class="w-100 offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <form>
+                                    <!--NOME E COGNOME-->
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-nome" class="form-label">Nome</label>
+                                            <input id="input-nome" type="text" class="form-control" aria-label="First name">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-cognome" class="form-label">Cognome</label>
+                                            <input id="input-cognome" type="text" class="form-control" aria-label="Last name">
+                                        </div>
+                                    </div>
+                                      <!--EMAIL E PASSWORD-->
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-email-1" class="form-label">Email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                <input id="input-email-1" type="text" class="form-control" aria-label="First name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-password-1" class="form-label">Password</label>
+                                            <input id="input-password-1" type="text" class="form-control" aria-label="Last name">
+                                        </div>
+                                    </div>
+                                      <!--EMAIL E PASSWORD-->
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-email-2" class="form-label">Indirizzo Email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                <input id="input-email-2" type="text" class="form-control" aria-label="First name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-password-2" class="form-label">Password</label>
+                                            <input id="input-password-2" type="text" class="form-control" aria-label="Last name">
+                                        </div>
+                                    </div>
+                                      <!--INDIRIZZO-->
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <label for="input-indirizzo" class="form-label">Indirizzo</label>
+                                            <input id="input-indirizzo"type="text" class="form-control" aria-label="First name">
+                                        </div>
+                                    </div>
+                                      <!--CITTA STATO E CAP-->
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="input-citta" class="form-label">Città</label>
+                                            <input id="input-citta"  type="text" class="form-control" aria-label="First name">
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label for="input-stato" class="form-label">Stato</label>
+                                            <select id="input-stato" class="form-select" aria-label=".form-select-lg example">
+                                                <option selected>Scegli...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-12 col-md-2">
+                                            <label for="input-cap" class="form-label">CAP</label>
+                                            <input id="input-cap" type="text" class="form-control" aria-label="Last name">
+                                          </div>
+                                    </div>
+                                      <!--FOTO-->
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <label for="input-foto" class="form-label">Foto</label>
+                                            <input id="input-foto" type="file" class="form-control" aria-label="First name">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                      <label class="form-check-label" for="exampleCheck1">Seleziona per proseguire</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Salva</button>
+                                    <button type="button" class="btn btn-warning">Svuota</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12 col-md-4 mt-md-4 col-lg-6 order-md-1">
                         <h2 class="d-inline-block">Boolean</h2>
@@ -137,8 +235,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 76</td>
+                                                    <td class="d-md-table-cell d-none">16 Feb 2021</td>
                                                     <td class="d-md-table-cell d-none">20%</td>
                                                     <td class="text-center">
                                                         <span class="badge bg-success">Done</span>
@@ -153,8 +251,24 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 77</td>
+                                                    <td class="d-md-table-cell d-none">17 Feb 2021</td>
+                                                    <td class="d-md-table-cell d-none">20%</td>
+                                                    <td class="text-center">
+                                                        <span class="badge btn btn-warning">process</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="icon_container text-center border rounded d-inline-block justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-pencil"></i>
+                                                        </div>
+                                                        <div class="icon_container text-center mx-1 border rounded d-inline-block justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 78</td>
+                                                    <td class="d-md-table-cell d-none">18 Feb 2021</td>
                                                     <td class="d-md-table-cell d-none">20%</td>
                                                     <td class="text-center">
                                                         <span class="badge bg-success">Done</span>
@@ -169,8 +283,24 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 79</td>
+                                                    <td class="d-md-table-cell d-none">19 Feb 2021</td>
+                                                    <td class="d-md-table-cell d-none">20%</td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-danger">failed</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="icon_container text-center border rounded d-inline-block justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-pencil"></i>
+                                                        </div>
+                                                        <div class="icon_container text-center mx-1 border rounded d-inline-block justify-content-center align-items-center">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 80</td>
+                                                    <td class="d-md-table-cell d-none">20 Feb 2021</td>
                                                     <td class="d-md-table-cell d-none">20%</td>
                                                     <td class="text-center">
                                                         <span class="badge bg-success">Done</span>
@@ -185,8 +315,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 81</td>
+                                                    <td class="d-md-table-cell d-none">21 Feb 2021</td>
                                                     <td class="d-md-table-cell d-none">20%</td>
                                                     <td class="text-center">
                                                         <span class="badge bg-success">Done</span>
@@ -201,40 +331,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
-                                                    <td class="d-md-table-cell d-none">20%</td>
-                                                    <td class="text-center">
-                                                        <span class="badge bg-success">Done</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <div class="icon_container text-center border rounded d-inline-block justify-content-center align-items-center">
-                                                            <i class="fa-solid fa-pencil"></i>
-                                                        </div>
-                                                        <div class="icon_container text-center mx-1 border rounded d-inline-block justify-content-center align-items-center">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
-                                                    <td class="d-md-table-cell d-none">20%</td>
-                                                    <td class="text-center">
-                                                        <span class="badge bg-success">Done</span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <div class="icon_container text-center border rounded d-inline-block justify-content-center align-items-center">
-                                                            <i class="fa-solid fa-pencil"></i>
-                                                        </div>
-                                                        <div class="icon_container text-center mx-1 border rounded d-inline-block justify-content-center align-items-center">
-                                                            <i class="fa-solid fa-trash"></i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 75</td>
-                                                    <td class="d-md-table-cell d-none">15 Feb 2021</td>
+                                                    <td colspan="3"><img src="./img/class-avatar.jpg" width="25px" height="25px" alt=""> Classe 82</td>
+                                                    <td class="d-md-table-cell d-none">22 Feb 2021</td>
                                                     <td class="d-md-table-cell d-none">20%</td>
                                                     <td class="text-center">
                                                         <span class="badge bg-success">Done</span>
